@@ -90,8 +90,7 @@
                 //automatischer statusbericht alle 150km.
                 if (_kilometerstand % 150 == 0)
                 {
-                    Console.Write("Automatischer ");
-                    ErstelleStatusbericht();
+                    ErstelleStatusbericht(automatisch: true);
                 }
 
                 //bei mehr als 1500km ist der motor kaputt. Das auto ist dann nicht mehr fahrbereit.
@@ -110,10 +109,10 @@
         /// <summary>
         /// Erstellt einen Statusbericht
         /// </summary>
-        public void ErstelleStatusbericht()
+        public void ErstelleStatusbericht(bool automatisch = false)
         {
             //einfacher statusbericht. kann wohl noch erweitert werden?
-            Console.WriteLine($"Statusbericht: Das Auto hat einen Kilometerstand von {_kilometerstand} km und es sind {_kraftstoffmenge} liter im Tank. Es ist{(_fahrbereit ? "" : " nicht mehr")} fahrbereit.");
+            Console.WriteLine($"{(automatisch ? "Automatischer " : "")}Statusbericht: Das Auto hat einen Kilometerstand von {_kilometerstand} km und es sind {_kraftstoffmenge} liter im Tank. Es ist{(_fahrbereit ? "" : " nicht mehr")} fahrbereit.");
         }
 
         /// <summary>
