@@ -89,7 +89,8 @@
 
                 //automatischer statusbericht alle 150km.
                 if (_kilometerstand % 150 == 0)
-                {
+                {                   
+                    //rufe Mehtode ErstelleStatusbericht mit Benamtem Parameter auf, so kann besser gesehen werden warum hier 'true' uebergeben wird.
                     ErstelleStatusbericht(automatisch: true);
                 }
 
