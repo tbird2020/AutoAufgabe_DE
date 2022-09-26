@@ -64,8 +64,8 @@
                 //gesamt-km stand erhoehen
                 _kilometerstand++;
 
-                //alle 10km wird die Kraftstoffmenge um den Verbrauch des Autos reduziert (unt ein paar tests durchgefuehrt)
-                if (_kilometerstand % 10 == 0)
+                //alle 10km wird die Kraftstoffmenge um den Verbrauch des Autos reduziert (und ein paar tests durchgefuehrt)
+                if (gefahreneKm % 10 == 0)
                 {
                     _kraftstoffmenge -= _verbrauch;
 
